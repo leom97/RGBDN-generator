@@ -1,0 +1,11 @@
+Per installare assimp
+
+Fai le solite cose con CMAKE GUI
+Metti l'install path nella cartella dove lib e include son presenti
+Install
+Ci sarà un errore, cioè che assimp-vc143-mtd.pdb non è stato messo in install_path/lib
+Mettilo in lib
+Poi, seguendo: https://stackoverflow.com/questions/2119539/how-do-i-set-the-path-to-a-dll-file-in-visual-studio, aggiungi la riga PATH=C:\Code\University\TUM\learnOpenGL\bin;%PATH% in Proprietà > Generali > Ambiente (dove c'è un .dll di assimp)
+
+Infine, dopo avere impostato tutte le include o lib directories, aggiungi anche assimp-vc143-mtd.lib nelle opzioni di linker (zlibstaticd.lib non sembra essere richiesto)
+
